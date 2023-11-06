@@ -16,7 +16,6 @@ const apiSearchService = async () => {
  * @returns {Promise<Array<Object>, Error>}
  */
 const apiSearchServiceWithName = async title => {
-	console.log("Real Api Search Service with Name");
 	return await axios.get(`${process.env.apiUrl}?title=${title}`);
 }
 
