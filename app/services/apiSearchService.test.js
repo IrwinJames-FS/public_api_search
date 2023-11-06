@@ -1,4 +1,8 @@
 const { apiSearchService, apiSearchServiceWithName } = require('../services/apiSearchService')
+
+//comment out to run live tests
+jest.mock("./apiSearchService");
+
 const testObject = {
 	"API": "FishWatch",
 	"Description": "Information and pictures about individual fish species",
@@ -8,6 +12,7 @@ const testObject = {
 	"Link": "https://www.fishwatch.gov/developers",
 	"Category": "Animals"
 };
+
 describe("Testing Api Search Service", () => {
 	test("Api Service Should return 1427 records", async () => {
 		const result = await apiSearchService()
